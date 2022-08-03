@@ -6,6 +6,9 @@
   "author": "Laura Arango <lmarangoc@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.18.1"
   }
