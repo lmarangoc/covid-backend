@@ -5,6 +5,7 @@
   "repository": "https://github.com/lmarangoc/covid-backend.git",
   "author": "Laura Arango <lmarangoc@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "express": "^4.18.1"
   }
