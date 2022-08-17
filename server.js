@@ -3,6 +3,7 @@ import Cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./db/db.js";
 import userRoutes from "./views/users/routes.js";
+import caseRoutes from "./views/helpers/routes.js";
 
 dotenv.config({ path: "./.env" });
 
@@ -11,6 +12,7 @@ app.use(Express.json());
 app.use(Cors());
 
 app.use(userRoutes);
+app.use(caseRoutes);
 
 const main = () => {
   return app.listen(process.env.PORT, () => {
