@@ -17,25 +17,25 @@ const genericCallback = (res) => (err, result) => {
   }
 };
 
-caseRoutes.route("/case").get((req, res) => {
+caseRoutes.route("/helper/managecase").get((req, res) => {
   console.log("Someone did get on the /case route");
   queryAllCases(genericCallback(res));
 });
 
-caseRoutes.route("/case/:id").get((req, res) => {
+caseRoutes.route("/helper/managecase/:id").get((req, res) => {
   console.log("Someone did get on the /case route");
   consultCase(req.params.id, genericCallback(res));
 });
 
-caseRoutes.route("/case").post((req, res) => {
+caseRoutes.route("/helper/registercase").post((req, res) => {
   createCase(req.body, genericCallback(res));
 });
 
-caseRoutes.route("/case/:id").patch((req, res) => {
+caseRoutes.route("/helper/managecase/:id").patch((req, res) => {
   editCase(req.params.id, req.body, genericCallback(res));
 });
 
-caseRoutes.route("/case/:id").delete((req, res) => {
+caseRoutes.route("/helper/managecase/:id").delete((req, res) => {
   deleteCase(req.params.id, genericCallback(res));
 });
 
